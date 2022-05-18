@@ -25,10 +25,27 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Building Layouts with Flutter'),
         ),
-        body: Center(
-          child: Text('Area Calculator',
-                  //this style has higher precendence than ThemeData
-                 style: TextStyle(fontSize: 30),),
+        body: Column(
+          children: [
+            Container(
+              // color: Colors.orangeAccent,
+              width: 200.0,
+              // child: Text("Imagine TV"),
+              height: 200.0,
+              margin: EdgeInsets.all(100),
+              decoration: BoxDecoration(
+                color: Colors.orangeAccent,
+                shape: BoxShape.rectangle,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(50.0),
+                  bottomRight: Radius.circular(50.0),
+                ),
+              ),
+              // child: Text('Area Calculator',
+              //         //this style has higher precendence than ThemeData
+              //        style: TextStyle(fontSize: 30),),
+            ),
+          ],
         ),
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.lightbulb_outline),
