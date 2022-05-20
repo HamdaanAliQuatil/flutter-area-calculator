@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 
@@ -32,15 +32,30 @@ class MyApp extends StatelessWidget {
               width: 200.0,
               // child: Text("Imagine TV"),
               height: 200.0,
+              // child: FlutterLogo(),
               margin: EdgeInsets.all(100),
               decoration: BoxDecoration(
                 color: Colors.orangeAccent,
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(50.0),
-                  bottomRight: Radius.circular(50.0),
-                ),
+                // gradient: LinearGradient(
+                //   stops: [0.5, 0.6,7.0, 0.8],
+                //   radius: 0.25,
+                    //  colors: [Colors.pink.shade50, Colors.pink.shade500],
+                //   colors: [Colors.blue,
+                //   Colors.green,
+                //   Colors.deepPurple,
+                //   Colors.pink,
+                  // ),
+                image: DecorationImage(
+                  image: NetworkImage('http://bit.ly/flutter_tiger'),
+                  fit: BoxFit.scaleDown,
+                ),  
+                shape: BoxShape.circle,
+                // borderRadius: BorderRadius.only(
+                //   topLeft: Radius.circular(50.0),
+                //   bottomRight: Radius.circular(50.0),
+                // ),
               ),
+              
               // child: Text('Area Calculator',
               //         //this style has higher precendence than ThemeData
               //        style: TextStyle(fontSize: 30),),
